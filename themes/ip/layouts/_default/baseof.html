@@ -3,9 +3,19 @@
   {{- partial "head.html" . -}}
   <body>
     {{- partial "header.html" . -}}
-    <main class="content">
-        {{- block "main" . }}{{- end }}
-    </main>
+    <main class="content">{{- block "main" . }}{{ -end }}</main>
     {{- partial "footer.html" . -}}
+    <amp-analytics type="gtag" data-credentials="include">
+      <script type="application/json">
+        {
+          "vars" : {
+            "gtag_id": "{{ $.Site.Params.googleAnalyticsId }}",
+            "config" : {
+              "{{ $.Site.Params.googleAnalyticsId }}": { "groups": "default" }
+            }
+          }
+        }
+      </script>
+    </amp-analytics>
   </body>
 </html>
