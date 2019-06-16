@@ -1,3 +1,10 @@
-<header>
-    penchev.dev
+<header class="header">
+  <a class="header--logo" href="{{ $.Site.BaseURL }}">
+    {{ partial "amp/image.html" $.Site.Params.logo }}
+  </a>
+  <nav class="header--nav">
+    {{ range .Site.Menus.main }}
+      <a class="header--nav--item" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
 </header>

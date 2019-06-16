@@ -1,12 +1,39 @@
-header {
-  grid-column: span 3;
-  font-size: 2rem;
-  text-align: center;
-  margin: 3rem 0rem;
+@import "./colors.scss";
+
+.header {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 0.5rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header > .header--logo {
+  float: left;
+  padding-top: 0.6rem;
+}
+
+.header--nav {
+  padding-top: 0.9rem;
+  text-align: right;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.header--nav--item {
+  padding: 0rem 0.5rem;
+  color: $dark;
 }
 
 @media (max-width: 1024px) {
-  header {
+  .header {
     margin: 2rem 0rem;
+  }
+
+  .header--logo {
+    float: none;
+  }
+
+  .header--nav {
+    float: none;
   }
 }

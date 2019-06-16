@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ range first 10 .Data.Pages }}
+    {{ partial "postsummary" . }}
+  {{ end }}
+{{ end }}

@@ -3,5 +3,18 @@
 @import "typography";
 
 @import "header";
-@import "nav";
+@import "content";
+@import "postsummary";
+@import "blogpost";
 @import "footer";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

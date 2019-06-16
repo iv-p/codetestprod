@@ -4,7 +4,7 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 768px 1fr;
+  grid-template-columns: 1fr 1023px 1fr;
   grid-template-rows: auto 1fr auto;
 }
 
@@ -14,20 +14,4 @@ body {
     flex-direction: column;
     min-height: 100vh;
   }
-}
-
-main {
-  padding: 0rem 1rem;
-}
-
-p {
-  margin: 1.5rem 0rem 0rem 0rem;
-}
-
-a.title {
-  font-size: 2rem;
-}
-
-div.summary {
-  margin: 2rem 0rem;
 }

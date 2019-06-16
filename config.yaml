@@ -1,6 +1,13 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: CodeTestProd
 theme: "ip"
 params:
   minify: true
+  googleAnalyticsId: "UA-142144190-1"
+  logo:
+    src: "/logo.png"
+    alt: "code test prod's logo"
+    layout: "fixed"
+    height: "50"
+    width: "250"

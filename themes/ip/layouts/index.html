@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html ⚡>
-  {{- partial "head.html" . -}}
-  <body>
-    {{- partial "header.html" . -}}
-    {{- partial "nav.html" . -}}
-    <main>
-      {{ range first 10 .Data.Pages }}
-      <a class="title" href="{{ .Permalink }}">
-        {{ .Title }}
-      </a>
-      <div class="summary">
-        {{ .Summary}}
-      </div>
-      {{ end }}
-    </main>
-    {{- partial "footer.html" . -}}
-  </body>
-</html>
+{{ define "main" }}
+  {{ range first 10 .Data.Pages }}
+    {{ partial "postsummary" . }}
+  {{ end }}
+{{ end }}
