@@ -5,8 +5,9 @@ all: build
 build: styles
 	hugo
 
-styles: gulp
-	cd themes/ip; npm i; gulp scss
+styles: scss-deps
+	gulp scss
 
-gulp:
+scss-deps:
 	npm i -g gulp
+	cd themes/ip; npm i;
